@@ -28,8 +28,8 @@ export default function GeoLocation() {
         placeholder="Enter IP Address here (X.X.X.X)"
         onChange={handleChange}
       />
-      <p className="text-m font-bold text-indigo-700 my-3  ">
-        Keep blank for searching your own IP
+      <p className="text-indigo-700 font-bold text-md mt-3">
+        Keep blank if you want to search for your own IP
       </p>
 
       <button
@@ -40,11 +40,11 @@ export default function GeoLocation() {
         IP Lookup
       </button>
       {ipData != null ? (
-        ipData.status === "success" ? (
+        ipData.status == "success" ? (
           <GeoLocationDetails data={ipData} />
         ) : (
           <p className="text-red-500 text-2xl font-bold">
-            Error from API: {ipData.message}
+            Error from API. Enter Correct IP
           </p>
         )
       ) : null}

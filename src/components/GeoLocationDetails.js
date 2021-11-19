@@ -6,7 +6,7 @@ export default function GeoLocationDetails(props) {
           <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt class="text-xl font-medium text-gray-500">IP Address</dt>
             <dd class="mt-1 text-xl text-gray-900 sm:mt-0 sm:col-span-2">
-              {props.data.query}
+              {props.data.ip}
             </dd>
           </div>
           <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -18,7 +18,7 @@ export default function GeoLocationDetails(props) {
           <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt class="text-xl font-medium text-gray-500">Region</dt>
             <dd class="mt-1 text-xl text-gray-900 sm:mt-0 sm:col-span-2">
-              {props.data.regionName}
+              {props.data.region}
             </dd>
           </div>
           <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -28,9 +28,9 @@ export default function GeoLocationDetails(props) {
             </dd>
           </div>
           <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-            <dt class="text-xl font-medium text-gray-500">ISP</dt>
+            <dt class="text-xl font-medium text-gray-500">Postal</dt>
             <dd class="mt-1 text-xl text-gray-900 sm:mt-0 sm:col-span-2">
-              {props.data.isp}
+              {props.data.postal}
             </dd>
           </div>
           <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -42,13 +42,13 @@ export default function GeoLocationDetails(props) {
           <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt class="text-xl font-medium text-gray-500">Latitude</dt>
             <dd class="mt-1 text-xl text-gray-900 sm:mt-0 sm:col-span-2">
-              {props.data.lat}
+              {props.data.loc.split(",")[0]}
             </dd>
           </div>
           <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt class="text-xl font-medium text-gray-500">Longitude</dt>
             <dd class="mt-1 text-xl text-gray-900 sm:mt-0 sm:col-span-2">
-              {props.data.lon}
+              {props.data.loc.split(",")[1]}
             </dd>
           </div>
         </dl>

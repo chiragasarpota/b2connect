@@ -1,17 +1,20 @@
-const geoBaseLink = "http://ip-api.com/json/";
+const geoBaseLink = "https://ipinfo.io";
 const cryptoLink = "https://api.coingecko.com/api/v3/exchange_rates";
-const loginLink = "https://untitled-qhrhp7hd0wmj.runkit.sh/login";
+const loginLink = "https://login-b2connect-qhrhp7hd0wmj.runkit.sh/login";
 
 const tickers = ["usd", "gbp", "eur", "aed", "hkd"];
 
 export async function getGeoLocation(ipAddress) {
-  const finalLink = geoBaseLink + ipAddress;
+  const finalLink =
+    (ipAddress == "" ? geoBaseLink : "/" + ipAddress) +
+    "/geo?token=d18ff58adf9696";
   try {
     const res = await fetch(finalLink);
     const data = await res.json();
+    if (data.status == null) data.status = "success";
     return data;
   } catch (err) {
-    return null;
+    return { status: "failure" };
   }
 }
 
