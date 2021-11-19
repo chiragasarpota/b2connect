@@ -1,5 +1,5 @@
 import { useState } from "react";
-import getGeoLocation from "../services/api";
+import { getGeoLocation } from "../services/api";
 import GeoLocationDetails from "./GeoLocationDetails";
 
 export default function GeoLocation() {
@@ -16,7 +16,7 @@ export default function GeoLocation() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center mb-16">
       <h1 className="text-4xl text-black font-bold pb-6">
         Geo Location Search
       </h1>
