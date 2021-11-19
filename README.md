@@ -2,6 +2,11 @@
 
 Test site deployed using CI/CD available here: [Test Site](https://b2connect.netlify.app)
 
+Credentials:
+
+email: admin@b2connect.me
+password: testpassword
+
 API deployed on RunKit with one login endpoint with following code:
 
     const express = require('express')
