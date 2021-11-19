@@ -1,6 +1,29 @@
-# Getting Started with Create React App
+# B2Connect Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Test site deployed using CI/CD available here: [https://b2connect.netlify.app/](Test Site)
+
+API deployed on RunKit with one login endpoint with following code:
+`const express = require('express')
+const app = express()
+var cors = require('cors')
+app.use(cors())
+app.use(express.json());
+
+const port = 3000
+
+app.post('/login', (req, res) => {
+if(req.body.email=="admin@b2connect.me" && req.body.password=="testpassword"){
+res.send(JSON.stringify({status: "Success"}))
+}
+else{
+res.send(JSON.stringify({status: "Failure"}))
+}
+res.send(Date.now().toString())
+})
+
+app.listen(port, () => {
+console.log(`Example app listening at http://localhost:${port}`)
+})`
 
 ## Available Scripts
 

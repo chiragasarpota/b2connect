@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import {
   BarChart,
   Bar,
-  Cell,
   XAxis,
   YAxis,
   CartesianGrid,
