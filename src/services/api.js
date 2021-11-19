@@ -6,7 +6,7 @@ const tickers = ["usd", "gbp", "eur", "aed", "hkd"];
 
 export async function getGeoLocation(ipAddress) {
   const finalLink =
-    (ipAddress == "" ? geoBaseLink : "/" + ipAddress) +
+    (ipAddress === "" ? geoBaseLink : "/" + ipAddress) +
     "/geo?token=d18ff58adf9696";
   try {
     const res = await fetch(finalLink);

@@ -40,7 +40,7 @@ export default function GeoLocation() {
         IP Lookup
       </button>
       {ipData != null ? (
-        ipData.status == "success" ? (
+        ipData.status === "success" ? (
           <GeoLocationDetails data={ipData} />
         ) : (
           <p className="text-red-500 text-2xl font-bold">
