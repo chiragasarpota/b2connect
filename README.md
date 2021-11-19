@@ -1,29 +1,30 @@
 # B2Connect Assignment
 
-Test site deployed using CI/CD available here: [https://b2connect.netlify.app/](Test Site)
+Test site deployed using CI/CD available here: [Test Site](https://b2connect.netlify.app)
 
 API deployed on RunKit with one login endpoint with following code:
-`const express = require('express')
-const app = express()
-var cors = require('cors')
-app.use(cors())
-app.use(express.json());
 
-const port = 3000
+    const express = require('express')
+    const app = express()
+    var cors = require('cors')
+    app.use(cors())
+    app.use(express.json());
 
-app.post('/login', (req, res) => {
-if(req.body.email=="admin@b2connect.me" && req.body.password=="testpassword"){
-res.send(JSON.stringify({status: "Success"}))
-}
-else{
-res.send(JSON.stringify({status: "Failure"}))
-}
-res.send(Date.now().toString())
-})
+    const port = 3000
 
-app.listen(port, () => {
-console.log(`Example app listening at http://localhost:${port}`)
-})`
+    app.post('/login', (req, res) => {
+        if(req.body.email=="admin@b2connect.me" && req.body.password=="testpassword"){
+            res.send(JSON.stringify({status: "Success"}))
+        }
+        else{
+            res.send(JSON.stringify({status: "Failure"}))
+        }
+    res.send(Date.now().toString())
+    })
+
+    app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+    })
 
 ## Available Scripts
 
